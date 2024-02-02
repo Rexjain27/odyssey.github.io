@@ -1,0 +1,98 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --start-color: #0575E6;
+    --end-color: #021B79;
+    --p-color: #929DA6;
+    --button-background: #2D112B;
+    --input-background: #e4eff8;
+    --radius-50: 50px;
+    --padding-15: 15px;
+  }
+
+  html,
+  body {
+    background-color: #FEDCC8;
+    overflow: hidden;
+  }
+
+  .parallax {
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin-left: -1500px;
+    min-height: 100vh;
+
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .parallax__layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .parallax__cover {
+    background: #2D112B;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    z-index: 2;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .parallax__layer__0 {
+    transform: translateZ(-300px) scale(4);
+  }
+
+  .parallax__layer__1 {
+    transform: translateZ(-250px) scale(3.5);
+  }
+
+  .parallax__layer__2 {
+    transform: translateZ(-200px) scale(3);
+  }
+
+  .parallax__layer__3 {
+    transform: translateZ(-150px) scale(2.5);
+  }
+
+  .parallax__layer__4 {
+    transform: translateZ(-100px) scale(2);
+  }
+
+  .parallax__layer__5 {
+    transform: translateZ(-50px) scale(1.5);
+  }
+
+  .parallax__layer__6 {
+    transform: translateZ(0px) scale(1);
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+

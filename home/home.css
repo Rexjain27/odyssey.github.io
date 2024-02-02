@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap');
+
+
+body {
+    background-color: #FEDCC8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: 0px;
+    padding: 5px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.sapreater {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(219, 213, 213, 0.4);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+
+/* desktop view  */
+
+.desktop_nav {
+    display: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop_nav_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-right: 8px;
+}
+
+.desktop_nav_list {
+
+    background-color: #2d112b;
+    box-shadow: 2px 2px 0.5px #5A0030;
+    border-radius: 20px;
+    margin-right: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.desktop_nav_icon {
+    text-decoration: none;
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+
+/* mobile view */
+
+.mobile_nav {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.mobile_icon {
+    width: 2.75rem;
+    height: 2rem;
+    color: #F44C3A;
+}
+
+.mobile_icon[name="close-outline"] {
+    display: none;
+}
+
+
+/* responsive Navbar view */
+
+
+@media (max-width:51.25em) {
+    .mobile_nav {
+        display: block;
+        z-index: 999;
+        background-color: #2d2d2d;
+        border-radius: 5px;
+        box-shadow: 2px 2px #5A0030;
+    }
+
+    .desktop_nav {
+        width: 100%;
+        height: 100vh;
+        background-color: #2d112b;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* trasition for mobile */
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+    }
+
+    .desktop_nav_bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktop_nav_list {
+        margin-top: 4px;
+        background-color: #2d2d2d;
+        box-shadow: 2px 2px 0.5px #5A0030;
+    }
+
+    .active .desktop_nav {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile_nav .mobile_icon[name="close-outline"] {
+        display: block;
+    }
+
+    .active .mobile_nav .mobile_icon[name="menu-outline"] {
+        display: none;
+    }
+
+}
+
+
+/* Heros section */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 25px;
+    color: #5A0030;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.hero_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.hero_card img {
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0.5px #5A0030;
+    margin: 10px;
+    object-fit: cover;
+    object-position: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.hero h2 {
+    font-family: 'Rubik Glitch Pop', system-ui;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #5A0030;
+}
+
+/* Responsive Hero */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .hero_card {
+        margin: 10px;
+    }
+
+    .hero h1, .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero img {
+        height: auto;
+        width: 90%;
+    }
+
+
+    .hero_card img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+}
+
+/* About Us */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.about-image {
+    flex: 1 1 400px;
+    margin: 0 2rem;
+}
+
+.about-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.about-image-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.about-image-container:hover img {
+    transform: scale(1.1);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2d112b;
+    background-color: rgba(159, 82, 20, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.about-image-container:hover .play-button {
+    opacity: 1;
+}
+
+.about-text {
+    flex: 1 1 400px;
+    margin: 0 2rem;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Cabin', sans-serif;
+}
+
+@media (max-width: 768px) {
+
+    .about-image,
+    .about-text {
+        flex: 1 1 100%;
+    }
+
+    .about-image-container img {
+        width: 100%;
+    }
+}
+
+/* Events and Artist */
+
+.event, .artist {
+    padding: 50px 0;
+}
+
+.event-heading,.artist-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.event-heading h1, .artist-heading h1 {
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 48px;
+    color: #5A0030;
+}
+
+.event-container, .artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-card, .artist-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(33.333% - 50px);
+    background-color: rgba(204, 195, 195, 0.4);
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.event-image, .artist-image {
+    border-radius: 15px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 #2d112b;
+}
+
+.event-image img, .artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details, .artist-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.event-details h2, .artist-details h2 {
+    font-family: 'Rubik Glitch Pop', system-ui;
+    font-size: 24px;
+    color: #5A0030;
+    margin-bottom: 10px;
+}
+
+.event-details p, .artist-details p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    color: #5A0030;
+    margin-bottom: 20px;
+}
+
+.event-button, .artist-button {
+    display: inline-block;
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px 0 #5A0030;
+    color: #F44C3A;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.event-container-button, .artist-container-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.know-more-button {
+    display: inline-block;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #2d112b;
+    box-shadow: 0 4px 8px 0 #5A0030;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Bungee Spice', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.event-button:hover, .artist-button:hover {
+    background-color: #2d112b;
+}
+
+@media (max-width: 1200px) {
+    .event-card, .artist-card {
+        width: calc(50% - 50px);
+    }
+}
+
+@media (max-width: 768px) {
+    .event-card, .event-card {
+        width: 100%;
+    }
+}
+
+/* Artist */
+
